@@ -41,7 +41,7 @@ public class CommandTransformPrices implements Command<List<Product>> {
         if (product.isPresent()) {
             Product p = product.get();
             BigDecimal price = p.get_l().multiply(_transformRQ.get_amount()); //precio btc * cantidad de btc
-            _productList.forEach(x -> x.set_l(price.divide(x.get_l(), 2, RoundingMode.DOWN))); //divido la cantidad de $ que representan esos btc entre el precio de cada moneda
+            _productList.forEach(x -> x.set_l(price.divide(x.get_l(), 5, RoundingMode.DOWN))); //divido la cantidad de $ que representan esos btc entre el precio de cada moneda
         } else
             throw new IncorrectOptionException();
 

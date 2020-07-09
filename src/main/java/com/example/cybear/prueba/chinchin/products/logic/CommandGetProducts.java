@@ -10,6 +10,8 @@ import org.springframework.boot.web.client.RestTemplateBuilder;
 import org.springframework.stereotype.Component;
 import org.springframework.web.client.RestTemplate;
 
+import java.math.BigDecimal;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -17,6 +19,10 @@ import java.util.stream.Collectors;
 public class CommandGetProducts implements Command<List<Product>> {
     @Value("${binance.api}")
     private String _url;
+    @Value("${ptr.price}")
+    private BigDecimal _petroPrice;
+    @Value("${bss.price}")
+    private BigDecimal _bssPrice;
     private RestTemplate _restTemplate;
     private List<Product> _data;
 
@@ -39,6 +45,7 @@ public class CommandGetProducts implements Command<List<Product>> {
                     .filter(this::filterq)
                     .filter(this::filters)
                     .collect(Collectors.toList());
+            addCurrencies();
         } else
             throw new NoProductsException();
     }
@@ -55,7 +62,12 @@ public class CommandGetProducts implements Command<List<Product>> {
     }
 
     private void addCurrencies() {
-
+        Product petro = new Product("PTRUSDT", "USDT", "", "", "", _petroPrice);
+        Product bss = new Product("BSSUSDT", "USDT", "", "", "", _bssPrice);
+        if (_data == null)
+            _data = new ArrayList<>();
+        _data.add(petro);
+        _data.add(bss);
     }
 
     @Override

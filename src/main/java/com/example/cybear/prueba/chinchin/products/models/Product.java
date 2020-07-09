@@ -76,6 +76,15 @@ public class Product implements IProduct {
         _etf = etf;
     }
 
+    public Product(String _s, String _q, String _ba, String _an, String _qn, BigDecimal _l) {
+        this._s = _s;
+        this._q = _q;
+        this._ba = _ba;
+        this._an = _an;
+        this._qn = _qn;
+        this._l = _l;
+    }
+
     public String get_s() {
         return _s;
     }
