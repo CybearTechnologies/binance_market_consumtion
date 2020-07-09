@@ -1,5 +1,6 @@
 package com.example.cybear.prueba.chinchin.products.models;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 import java.math.BigDecimal;
@@ -79,10 +80,12 @@ public class Product implements IProduct {
         return _s;
     }
 
+    @JsonIgnore
     public String get_st() {
         return _st;
     }
 
+    @JsonIgnore
     public String get_b() {
         return _b;
     }
@@ -95,14 +98,17 @@ public class Product implements IProduct {
         return _ba;
     }
 
+    @JsonIgnore
     public String get_qa() {
         return _qa;
     }
 
+    @JsonIgnore
     public float get_i() {
         return _i;
     }
 
+    @JsonIgnore
     public BigDecimal get_ts() {
         return _ts;
     }
@@ -115,10 +121,12 @@ public class Product implements IProduct {
         return _qn;
     }
 
+    @JsonIgnore
     public BigDecimal get_o() {
         return _o;
     }
 
+    @JsonIgnore
     public BigDecimal get_h() {
         return _h;
     }
@@ -127,38 +135,47 @@ public class Product implements IProduct {
         return _l;
     }
 
+    @JsonIgnore
     public BigDecimal get_c() {
         return _c;
     }
 
+    @JsonIgnore
     public BigDecimal get_v() {
         return _v;
     }
 
+    @JsonIgnore
     public BigDecimal get_qv() {
         return _qv;
     }
 
+    @JsonIgnore
     public int get_y() {
         return _y;
     }
 
+    @JsonIgnore
     public BigDecimal get_as() {
         return _as;
     }
 
+    @JsonIgnore
     public String get_pm() {
         return _pm;
     }
 
+    @JsonIgnore
     public String get_pn() {
         return _pn;
     }
 
+    @JsonIgnore
     public BigInteger get_cs() {
         return _cs;
     }
 
+    @JsonIgnore
     public boolean is_etf() {
         return _etf;
     }
