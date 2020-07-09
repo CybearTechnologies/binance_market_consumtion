@@ -3,6 +3,7 @@ package com.example.cybear.prueba.chinchin.products.models;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 import java.math.BigDecimal;
+import java.math.BigInteger;
 
 public class Product implements IProduct {
     private String _s;
@@ -25,7 +26,7 @@ public class Product implements IProduct {
     private BigDecimal _as;
     private String _pm;
     private String _pn;
-    private int _cs;
+    private BigInteger _cs;
     private boolean _etf;
 
     public Product(@JsonProperty("s") String s,
@@ -48,7 +49,7 @@ public class Product implements IProduct {
                    @JsonProperty("as") BigDecimal as,
                    @JsonProperty("pm") String pm,
                    @JsonProperty("pn") String pn,
-                   @JsonProperty("cs") int cs,
+                   @JsonProperty("cs") BigInteger cs,
                    @JsonProperty("etf") boolean etf) {
         _s = s;
         _st = st;
@@ -154,7 +155,7 @@ public class Product implements IProduct {
         return _pn;
     }
 
-    public int get_cs() {
+    public BigInteger get_cs() {
         return _cs;
     }
 
@@ -242,11 +243,39 @@ public class Product implements IProduct {
         this._pn = _pn;
     }
 
-    public void set_cs(int _cs) {
+    public void set_cs(BigInteger _cs) {
         this._cs = _cs;
     }
 
     public void set_etf(boolean _etf) {
         this._etf = _etf;
+    }
+
+    @Override
+    public String toString() {
+        return "Product{" +
+                "_s='" + _s + '\'' +
+                ", _st='" + _st + '\'' +
+                ", _b='" + _b + '\'' +
+                ", _q='" + _q + '\'' +
+                ", _ba='" + _ba + '\'' +
+                ", _qa='" + _qa + '\'' +
+                ", _i=" + _i +
+                ", _ts=" + _ts +
+                ", _an='" + _an + '\'' +
+                ", _qn='" + _qn + '\'' +
+                ", _o=" + _o +
+                ", _h=" + _h +
+                ", _l=" + _l +
+                ", _c=" + _c +
+                ", _v=" + _v +
+                ", _qv=" + _qv +
+                ", _y=" + _y +
+                ", _as=" + _as +
+                ", _pm='" + _pm + '\'' +
+                ", _pn='" + _pn + '\'' +
+                ", _cs=" + _cs +
+                ", _etf=" + _etf +
+                '}';
     }
 }

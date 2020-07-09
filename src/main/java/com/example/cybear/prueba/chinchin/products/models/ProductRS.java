@@ -64,4 +64,15 @@ public class ProductRS {
     public void set_success(boolean _success) {
         this._success = _success;
     }
+
+    @Override
+    public String toString() {
+        return "ProductRS{" +
+                "_code='" + _code + '\'' +
+                ", _message='" + _message + '\'' +
+                ", _messageDetail='" + _messageDetail + '\'' +
+                ", _data=" + _data +
+                ", _success=" + _success +
+                '}';
+    }
 }
