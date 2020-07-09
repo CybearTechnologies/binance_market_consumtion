@@ -1,5 +1,6 @@
-package com.example.cybear.prueba.chinchin.products.models;
+package com.example.cybear.prueba.chinchin.products.models.response;
 
+import com.example.cybear.prueba.chinchin.products.models.Product;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 import java.util.List;

@@ -2,7 +2,8 @@ package com.example.cybear.prueba.chinchin.products.logic;
 
 import com.example.cybear.prueba.chinchin.products.Exceptions.NoProductsException;
 import com.example.cybear.prueba.chinchin.products.models.Product;
-import com.example.cybear.prueba.chinchin.products.models.ProductRS;
+import com.example.cybear.prueba.chinchin.products.models.request.Request;
+import com.example.cybear.prueba.chinchin.products.models.response.ProductRS;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.web.client.RestTemplateBuilder;
@@ -22,6 +23,11 @@ public class CommandGetProducts implements Command<List<Product>> {
     @Autowired
     public CommandGetProducts(RestTemplateBuilder _restTemplateBuilder) {
         this._restTemplate = _restTemplateBuilder.build();
+    }
+
+    @Override
+    public void init(Request request) {
+        //no utilizado en get.
     }
 
     @Override

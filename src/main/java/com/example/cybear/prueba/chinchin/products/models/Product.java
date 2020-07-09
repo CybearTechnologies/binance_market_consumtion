@@ -19,7 +19,7 @@ public class Product implements IProduct {
     private String _qn;
     private BigDecimal _o;
     private BigDecimal _h;
-    private BigDecimal _l;
+    private BigDecimal _l; //tomado como el valor mas cercano al precio observado en la pagina.
     private BigDecimal _c;
     private BigDecimal _v;
     private BigDecimal _qv;
@@ -131,6 +131,7 @@ public class Product implements IProduct {
         return _h;
     }
 
+    @JsonProperty("price")
     public BigDecimal get_l() {
         return _l;
     }
