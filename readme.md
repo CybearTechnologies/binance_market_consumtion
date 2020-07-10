@@ -13,7 +13,7 @@
 | Command | Description | Cuerpo | Accion |
 | --- | --- | --- |--- |
 | `GET` | **/products** | - | Informacion de todos los productos en $|
-| `POST` | **/product-transform** |{"currency": "BTCUSDT" ,"amount": "1"}| Lleva la cantidad y precio de una determinada moneda y lo compara con las demas, ejemplo: 50 BTC cuanto equivale en EUROS O DASH en relación al precio de la pagina.|
+| `POST` | **/product-transform** |{"currency": "BTCUSDT" ,"amount": "50"}| Lleva la cantidad y precio de una determinada moneda y lo compara con las demas, ejemplo: 50 BTC cuanto equivale en EUROS O DASH en relación al precio de la pagina.|
 
 
 
