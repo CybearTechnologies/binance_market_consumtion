@@ -5,7 +5,7 @@
 * [Maven](https://maven.apache.org/) - Manejo de Dependencias.
 * [Spring](https://spring.io//) - Almacenamiento de informacon en la nube
 
-##Ejecucion
+## Ejecucion
 
 * Para generar el WAR en la carpeta target: **mvn clean install -e**
 * Por defecto el aplicativo se ejecuta en http://localhost:8080/
