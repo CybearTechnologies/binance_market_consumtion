@@ -3,7 +3,7 @@
   
 ## Herramientas Utilizadas.
 * [Maven](https://maven.apache.org/) - Manejo de Dependencias.
-* [Spring](https://spring.io//) - Almacenamiento de informacon en la nube
+* [Spring](https://spring.io//) - Framework utilizado.
 
 ## Ejecucion
 
